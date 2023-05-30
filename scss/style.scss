@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+$color-btn: #d3a199;
+$btn-background: #be928b;
+$color-grey: #A09290;
+$background: #FFEFED;
+$ancho: 200px;
+$alto: 150px;
+
+@mixin header-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    height: 100%;
+}
+
+@mixin carrusel {
+    margin: 10px;
+    opacity: 75%;
+    display: flex;
+    justify-content: center;
+    width: $ancho *2 +100;
+    height: auto;
+}
+
+header, footer {
+  @include header-footer;
+}
+
+.rounded {
+width: $ancho/2;
+height: $alto -50;
+}
+
+h1 {
+    font-family: cursive;
+    transition: all 2s;
+        &:hover {
+            font-size: 55px;
+            color: #6f4f4a;
+        }
+}
+
+.btn-secondary {
+    background-color: $color-btn;
+    border-color: $color-btn;
+    margin: 10px;
+        &:hover {
+            background-color: $btn-background;
+        }
+}
+
+.show>.btn-secondary.dropdown-toggle {
+    background-color: $btn-background;
+}
+
+.carrusel-box {
+  display: flex;
+  justify-content: center;
+  height: $alto *4;
+  background-color: $background;
+}
+
+#carouselExampleControls {
+    @include carrusel;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 2px;
+    color: $color-grey;
+    height: 0px;
+    border: none;
+    border-top: 2px solid $color-grey;
+}
+
+h2 {
+    font-family: "Shadows Into Light Two";
+    font-size: 40px;
+    font-style: italic;
+    padding-left: 5px;
+}
+
+.titulo {
+    background-color: $background;
+    margin-bottom: 0;
+}
+
+.section-3{
+    background-color: #FFF5F4;
+    margin: 0;
+}
+
+.parrafo-inicio {
+    padding-top: 0;
+    font-family: "poppins";
+    font-size: large;
+    margin: 5px;
+}
+
+.parrafodescriptivo {
+    font-family: "poppins";
+    font-size: large;
+    margin: 0 5px 0 5px;
+}
+
+h3 {
+    margin: 5px;
+}
+
+.imgbox {
+    display: flex;
+    justify-content: space-between;
+    bottom: $alto -100;
+    padding: 10px;
+}
+
+.imginicio {
+    width: $ancho +130;
+    height: $alto *2 +30;
+    transition: all 1s;
+         &:hover {
+            border: 10px solid $color-btn;
+         }
+}
+
+.cajaimagenes {
+   text-align: center;
+   background-color: $background;
+}
+
+.imgproducto {
+    width: $ancho +100;
+    height: $alto *2;
+    margin-top: 10px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    transition: all 1s;
+         &:hover {
+            border: 10px solid $color-btn;
+         }
+
+}
+
+.parrafo-footer {
+    color: $color-grey;
+}
+
+.btn-primary {
+    background-color: $color-btn;
+    border-color: $color-btn;
+    margin: 10px;
+        &:hover {
+        background-color: $btn-background;
+        border-color: $btn-background;
+}
+}
+
+
+.footercontacto {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.parrafo_footer_contacto {
+    color: $color-grey;
+    margin-right: 35%;
+}
+
+.section_contacto {
+    margin: 10px;
+}
+
+i {
+    margin: 5px 5px 10px 10px;
+}
+
+@media (min-width: 350px) and (max-width: 500px) {
+    .rounded {
+        width: $ancho/4;
+        height: $alto -100;
+        }
+
+    h1 {
+        font-size: medium;
+           &:hover {
+            font-size: 30px;
+           }
+    }
+    .carrusel-box {
+        height: $alto *2;
+        width: auto;
+    }
+
+    #imgcarrusel {
+        max-width: $ancho *2 +100;
+        max-height: $alto *2;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-left: 5px;
+    }
+
+    .parrafo-inicio {
+        margin: 0 5px 0 5px;
+    }
+
+    .subtituloinicio {
+        font-size: 25px;
+        margin-left: 5px;
+    }
+
+    .imginicio {
+        max-width: $ancho -50;
+        max-height: $alto;
+        padding: 2px;
+    }
+
+    .imgbox {
+        display: inline-block;
+        margin-left: 7%;
+    }
+
+    .parrafo-footer {
+        font-size: 15px;
+        margin: 3px;
+        padding: 3px;
+        color: $color-grey;
+    }
+
+    .imgproducto {
+        width: $ancho -50;
+        height: $alto +50;
+    }
+
+    .parrafo_footer_contacto {
+        margin: 0;
+    }
+}
