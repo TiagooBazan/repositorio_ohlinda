@@ -42,7 +42,6 @@ h1 {
     font-family: cursive;
     transition: all 2s;
         &:hover {
-            font-size: 55px;
             color: #6f4f4a;
         }
 }
@@ -223,8 +222,8 @@ i {
     }
 
     .imginicio {
-        max-width: $ancho -50;
-        max-height: $alto;
+        max-width: $ancho +130;
+        max-height: $alto +180;
         padding: 2px;
     }
 
@@ -241,8 +240,8 @@ i {
     }
 
     .imgproducto {
-        width: $ancho -50;
-        height: $alto +50;
+        width: $ancho +130;
+        height: $alto +180;
     }
 
     .parrafo_footer_contacto {
